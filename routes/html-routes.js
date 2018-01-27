@@ -22,8 +22,8 @@ module.exports = function(app) {
 
 
 	app.get("/post", function(req, res) {
-		var username = req.user.username;
-		res.render("createNewPost", {username:  username});
+		var firstname = req.user.firstname;
+		res.render("createNewPost", {firstname:  firstname});
 	});
 
 	app.get("/home", function(req, res) {
