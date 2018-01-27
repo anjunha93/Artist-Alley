@@ -3,6 +3,7 @@
 
 var db = require("../models");
 
+
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -15,13 +16,13 @@ module.exports = function(app) {
   });
 
   app.get("/post", function(req, res) {
-		var subject = req.user.subject;
-		res.render("home", {subject:  subject});
+		var subject = req.idea.subject;
+		res.render("aboutUs", {subject:  subject});
   });
   
   app.get("/post", function(req, res) {
-		var title = req.user.title;
-		res.render("home", {title:  title});
+		var title = req.idea.title;
+		res.render("aboutUs", {title:  title});
   });
   
 };

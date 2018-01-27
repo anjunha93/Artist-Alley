@@ -26,8 +26,23 @@ module.exports = function(app) {
 		res.render("createNewPost", {username:  username});
 	});
 
+	app.get("/home", function(req, res) {
+		var username = req.user.username;
+		res.render("home", {username:  username});
+	});
+	
 	app.get("/about", function(req, res) {
 		var username = req.user.username;
 		res.render("aboutUs", {username:  username});
+	});
+
+	app.get("/about", function(req, res) {
+		var email = req.user.email;
+		res.render("aboutUs", {email:  email});
+
 	});	
+
+	
+
+	
 };
