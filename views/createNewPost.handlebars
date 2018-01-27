@@ -1,0 +1,26 @@
+{{> mainNavBar}}
+
+
+
+<div class="container">
+
+	<div class="row">
+		<form action="/my-handling-form-page" class="idea-form" method="post">
+		    <div class="input-group">
+		        <label for="name"><h2>Post your idea, {{ username }}</h2></label>
+		        <input type="hidden" class="form-control" id="username" name="username" value="{{ username }}">
+		    </div>
+		    <div class="input-group">
+		        <label for="title">Title</label>
+		        <input type="text" class="form-control" id="title" name="title">
+		    </div>
+			<div class="input-group">
+		        <label for="subject">Idea</label>
+		        <input type="text" class="form-control" id="subject" name="subject">
+		    </div>
+		    
+		    <button type="submit" class="btn btn-primary" value="register">Submit</button>
+
+		</form>
+	</div>
+</div>
